@@ -1,0 +1,16 @@
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\bin\Debug\Tic-Tac-Toe Version3.exe.config
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\bin\Debug\Tic-Tac-Toe Version3.exe
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\bin\Debug\Tic-Tac-Toe Version3.pdb
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3.csproj.AssemblyReference.cache
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\MainWindow.g.cs
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\App.g.cs
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3_MarkupCompile.cache
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3_MarkupCompile.lref
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\MainWindow.baml
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3.g.resources
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic_Tac_Toe_Version3.Properties.Resources.resources
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3.csproj.GenerateResource.cache
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3.csproj.CoreCompileInputs.cache
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3.exe
+C:\Users\Miltos\source\repos\Tic-Tac-Toe Version3\Tic-Tac-Toe Version3\obj\Debug\Tic-Tac-Toe Version3.pdb
