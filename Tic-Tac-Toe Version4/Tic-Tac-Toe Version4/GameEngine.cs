@@ -14,7 +14,6 @@ namespace Tic_Tac_Toe
         private int? currentColumn { get; set; }
 
 
-        //test
         public GameEngine(int gridSize)
         {
             GridSize = gridSize;
