@@ -6,21 +6,22 @@ using System.Windows.Media;
 namespace Tic_Tac_Toe
 {
     public partial class MainWindow : Window
+
     {
         public Button[,] Buttons { get; set; }
-        private Grid Grid { get; set; }
-
+        private Grid grid { get; set; }
+        public GameEngine GameEngine { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            grid = myGrid;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e, GameEngine GameEngine)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (GameEngine.GameOver)
             {
                 GameEngine.NewGame();
-                
                 return;
             }
 
@@ -53,7 +54,7 @@ namespace Tic_Tac_Toe
         }
         public void DefaultButtonFormat()
         {
-            Grid.Children.Cast<Button>().ToList().ForEach(button =>
+            grid.Children.Cast<Button>().ToList().ForEach(button =>
             {
                 button.Content = string.Empty;
                 button.Background = Brushes.Gray;
@@ -69,11 +70,11 @@ namespace Tic_Tac_Toe
             {
                 RowDefinition Row = new RowDefinition();
                 Row.Height = new GridLength(1.0, GridUnitType.Star);
-                Grid.RowDefinitions.Add(Row);
+                grid.RowDefinitions.Add(Row);
 
                 ColumnDefinition Column = new ColumnDefinition();
                 Column.Width = new GridLength(1.0, GridUnitType.Star);
-                Grid.ColumnDefinitions.Add(Column);
+                grid.ColumnDefinitions.Add(Column);
                 AddButtonsToGrid(i, gridSize);
             }
         }
@@ -84,16 +85,16 @@ namespace Tic_Tac_Toe
                 Button myButton = new Button();
                 Grid.SetRow(myButton, i);
                 Grid.SetColumn(myButton, j);
-                Grid.Children.Add(myButton);
+                grid.Children.Add(myButton);
                 Buttons[i, j] = myButton;
             }
         }
         private void NewGrid(int gridSize)
         {
-            GameEngine gameEngine = new GameEngine(gridSize);
-            CreateGrid(gameEngine.GridSize);
-            gameEngine.NewGame();
-            Buttons = new Button[gameEngine.GridSize, gameEngine.GridSize];
+            GameEngine = new GameEngine(gridSize);
+            Buttons = new Button[GameEngine.GridSize, GameEngine.GridSize];
+            CreateGrid(GameEngine.GridSize);
+            GameEngine.NewGame();
             DefaultButtonFormat();
             GiveButtonsAClickEventHandler();
         }

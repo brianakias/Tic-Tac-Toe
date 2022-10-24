@@ -8,6 +8,7 @@ namespace Tic_Tac_Toe
         public Player[,] BoardState { get; set; }
         public int GridSize { get; set; }
         public bool GameOver { get; set; } = false;
+        public bool IsTie { get; set; } = false;
         public bool ItsPlayerXsTurn { get; set; } = true;
         private List<Player> helperList { get; set; }
         private int? currentRow { get; set; }
@@ -24,12 +25,14 @@ namespace Tic_Tac_Toe
             DefaultBoardStateArray();
             ItsPlayerXsTurn = true;
             GameOver = false;
+            IsTie = false;
             currentRow = null;
             currentColumn = null;
         }
         private void DefaultBoardStateArray()
         {
-            BoardState = new Player[GridSize, GridSize];
+            // Why does test NewGame_Defaults_Initial_Values fail when the below is part of the code?
+            // BoardState = new Player[GridSize, GridSize];
 
             for (int i = 0; i < BoardState.GetLength(0); i++)
             {
@@ -50,12 +53,16 @@ namespace Tic_Tac_Toe
         public void CheckGridForWinner()
         {
             CheckRowsForWinner();
-            CheckColumnsForWinner();
-            CheckMainDiagonalForWinner();
-            CheckSecondaryDiagonalForWinner();
-            CheckForTie();
+            if (!GameOver)
+                CheckColumnsForWinner();
+            if (!GameOver)
+                CheckMainDiagonalForWinner();
+            if (!GameOver)
+                CheckSecondaryDiagonalForWinner();
+            if (!GameOver)
+                CheckForTie();
         }
-        private void CheckRowsForWinner()
+        public (Player, int?) CheckRowsForWinner()
         {
             helperList = new List<Player>();
             for (int i = 0; i < GridSize; i++)
@@ -72,15 +79,17 @@ namespace Tic_Tac_Toe
                 if (helperList.First() != Player.None && areAllButtonContentsEqual)
                 {
                     GameOver = true;
-                    return;
+                    return (helperList.First(), (int)currentRow);
                 }
                 else
                 {
                     helperList.Clear();
                 }
             }
+
+            return (Player.None, null);
         }
-        private void CheckColumnsForWinner()
+        public (Player, int?) CheckColumnsForWinner()
         {
             helperList = new List<Player>();
             for (int i = 0; i < GridSize; i++)
@@ -98,15 +107,17 @@ namespace Tic_Tac_Toe
                 if (helperList.First() != Player.None && areAllButtonContentsEqual)
                 {
                     GameOver = true;
-                    return;
+                    return (helperList.First(), (int)currentColumn);
                 }
                 else
                 {
                     helperList.Clear();
                 }
             }
+
+            return (Player.None, null);
         }
-        private void CheckMainDiagonalForWinner()
+        public Player CheckMainDiagonalForWinner()
         {
             helperList = new List<Player>();
 
@@ -120,14 +131,16 @@ namespace Tic_Tac_Toe
             if (helperList.First() != Player.None && areAllButtonContentsEqual)
             {
                 GameOver = true;
-                return;
+                return helperList.First();
             }
             else
             {
                 helperList.Clear();
             }
+
+            return Player.None;
         }
-        private void CheckSecondaryDiagonalForWinner()
+        public Player CheckSecondaryDiagonalForWinner()
         {
             helperList = new List<Player>();
 
@@ -143,20 +156,22 @@ namespace Tic_Tac_Toe
             if (helperList.First() != Player.None && areAllButtonContentsEqual)
             {
                 GameOver = true;
-                return;
+                return helperList.First();
             }
             else
             {
                 helperList.Clear();
             }
+
+            return Player.None;
         }
-        private void CheckForTie()
+        public void CheckForTie()
         {
             bool areAllCellsFilled = !BoardState.Cast<Player>().Any(cell => cell == Player.None);
             if (areAllCellsFilled)
             {
                 GameOver = true;
-                return;
+                IsTie = true;
             }
         }
     }

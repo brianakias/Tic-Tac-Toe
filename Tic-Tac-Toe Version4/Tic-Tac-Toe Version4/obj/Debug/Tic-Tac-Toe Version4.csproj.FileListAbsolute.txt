@@ -1,0 +1,16 @@
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4.csproj.AssemblyReference.cache
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4.csproj.SuggestedBindingRedirects.cache
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\MainWindow.g.cs
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\App.g.cs
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4_MarkupCompile.cache
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4_MarkupCompile.lref
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\bin\Debug\Tic-Tac-Toe Version4.exe.config
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\bin\Debug\Tic-Tac-Toe Version4.exe
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\bin\Debug\Tic-Tac-Toe Version4.pdb
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\MainWindow.baml
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4.g.resources
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic_Tac_Toe_Version4.Properties.Resources.resources
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4.csproj.GenerateResource.cache
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4.csproj.CoreCompileInputs.cache
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4.exe
+C:\Users\miltiadis.zoumekas\Source\Repos\brianakias\Tic-Tac-Toe\Tic-Tac-Toe Version4\Tic-Tac-Toe Version4\obj\Debug\Tic-Tac-Toe Version4.pdb
