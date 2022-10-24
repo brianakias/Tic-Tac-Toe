@@ -16,7 +16,6 @@ namespace Tic_Tac_Toe
 
         public GameEngine(int gridSize)
         {
-            //test
             GridSize = gridSize;
             BoardState = new Player[GridSize, GridSize];
         }
