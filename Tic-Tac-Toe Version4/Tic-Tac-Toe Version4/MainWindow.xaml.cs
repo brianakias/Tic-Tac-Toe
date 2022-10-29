@@ -66,6 +66,8 @@ namespace Tic_Tac_Toe
         }
         public void CreateGrid(int gridSize)
         {
+            ResetGridContent();
+
             for (int i = 0; i < gridSize; i++)
             {
                 RowDefinition Row = new RowDefinition();
@@ -78,6 +80,21 @@ namespace Tic_Tac_Toe
                 AddButtonsToGrid(i, gridSize);
             }
         }
+
+        private void ResetGridContent()
+        {
+            if (grid.Children.Capacity != 0)
+            {
+                grid.Children.Clear();
+            }
+
+            if (grid.RowDefinitions.Any() && grid.ColumnDefinitions.Any())
+            {
+                grid.RowDefinitions.Clear();
+                grid.ColumnDefinitions.Clear();
+            }
+        }
+
         private void AddButtonsToGrid(int i, int gridSize)
         {
             for (int j = 0; j < gridSize; j++)

@@ -33,7 +33,6 @@
         <TextBox AcceptsReturn="True"/>
 
         <Grid x:Name="myGrid" Background="Black">
-            <Button x:Name="somebuttonContent" />
         </Grid>
     </DockPanel>
 </Window>
