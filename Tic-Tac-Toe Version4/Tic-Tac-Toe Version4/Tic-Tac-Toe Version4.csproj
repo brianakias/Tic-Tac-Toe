@@ -70,7 +70,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NegativeBoardLocationException.cs" />
+    <Compile Include="NegativeBoardCoordinatesException.cs" />
+    <Compile Include="InvalidGridSizeException.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

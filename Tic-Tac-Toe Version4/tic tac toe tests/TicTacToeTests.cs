@@ -107,7 +107,7 @@ namespace nUnit_Tests_Tic_Tac_Toe
             gameEngine.SetNextPlayer();
             Assert.That(gameEngine.ItsPlayerXsTurn, Is.True);
         }
-        
+
         [Test]
         public void CheckRowsForWinner_PlayerXWonInFirstRow_GameIsOver()
         {
@@ -144,7 +144,7 @@ namespace nUnit_Tests_Tic_Tac_Toe
             Assert.That(rowWon, Is.EqualTo(row));
         }
 
-        [Test] 
+        [Test]
         public void CheckColumnsForWinner_PlayerOWonInSecondColumn_GameIsOver()
         {
             int column = 1;
@@ -203,8 +203,8 @@ namespace nUnit_Tests_Tic_Tac_Toe
             Player playerWon = gameEngine.CheckMainDiagonalForWinner();
             Assert.That(playerWon, Is.EqualTo(Player.X));
         }
-        
-        [Test] 
+
+        [Test]
         public void CheckSecondaryDiagonalForWinner_PlayerOWonInSecondaryDiagonal_GameIsOver()
         {
             int antiDiagonalCounter = gameEngine.GridSize - 1;
@@ -285,7 +285,7 @@ namespace nUnit_Tests_Tic_Tac_Toe
         {
             Player[,] boardState = gameEngine.BoardState;
             gameEngine.ItsPlayerXsTurn = true;
-            Assert.Throws<NegativeCoordinatesException>(() => gameEngine.UpdateBoardState(-1, 0, gameEngine.ItsPlayerXsTurn));
+            Assert.Throws<NegativeBoardCoordinatesException>(() => gameEngine.UpdateBoardState(-1, 0, gameEngine.ItsPlayerXsTurn));
         }
 
         [Test]
@@ -293,7 +293,7 @@ namespace nUnit_Tests_Tic_Tac_Toe
         {
             Player[,] boardState = gameEngine.BoardState;
             gameEngine.ItsPlayerXsTurn = false;
-            Assert.Throws<NegativeCoordinatesException>(() => gameEngine.UpdateBoardState(2, -2, gameEngine.ItsPlayerXsTurn));
+            Assert.Throws<NegativeBoardCoordinatesException>(() => gameEngine.UpdateBoardState(2, -2, gameEngine.ItsPlayerXsTurn));
         }
 
         [Test]
@@ -301,7 +301,19 @@ namespace nUnit_Tests_Tic_Tac_Toe
         {
             Player[,] boardState = gameEngine.BoardState;
             gameEngine.ItsPlayerXsTurn = true;
-            Assert.Throws<NegativeCoordinatesException>(() => gameEngine.UpdateBoardState(-4, -2, gameEngine.ItsPlayerXsTurn));
+            Assert.Throws<NegativeBoardCoordinatesException>(() => gameEngine.UpdateBoardState(-4, -2, gameEngine.ItsPlayerXsTurn));
+        }
+
+        [Test]
+        public void GameEngine_PassingGridSizeLessThan3_ThrowsInvalidGridSizeException()
+        {
+            Assert.Throws<InvalidGridSizeException>(() => new GameEngine(2));
+        }
+
+        [Test]
+        public void GameEngine_PassingGridSizeGreaterThan12_ThrowsInvalidGridSizeException()
+        {
+            Assert.Throws<InvalidGridSizeException>(() => new GameEngine(13));
         }
     }
 }

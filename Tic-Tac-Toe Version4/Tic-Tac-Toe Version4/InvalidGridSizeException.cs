@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tic_Tac_Toe
 {
-    public class NegativeCoordinatesException : Exception
+    public class InvalidGridSizeException : Exception
     {
-        public NegativeCoordinatesException(string message) : base(message)
+        public InvalidGridSizeException(string message) : base(message)
         {
 
         }

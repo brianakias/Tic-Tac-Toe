@@ -17,6 +17,11 @@ namespace Tic_Tac_Toe
 
         public GameEngine(int gridSize)
         {
+            if (gridSize < 3 || gridSize > 12)
+            {
+                throw new InvalidGridSizeException("The grid size cannot be less than 3 or greater than 12");
+            }
+
             GridSize = gridSize;
             BoardState = new Player[GridSize, GridSize];
         }
@@ -43,7 +48,7 @@ namespace Tic_Tac_Toe
         {
             if (row < 0 || column < 0)
             {
-                throw new NegativeCoordinatesException("The board cannot have negative coordinates");
+                throw new NegativeBoardCoordinatesException("The board cannot have negative coordinates");
             }
 
             BoardState[row, column] = itsPlayerXsTurn ? Player.X : Player.O;
