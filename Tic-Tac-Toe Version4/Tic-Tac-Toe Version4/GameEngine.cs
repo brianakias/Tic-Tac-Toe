@@ -31,9 +31,6 @@ namespace Tic_Tac_Toe
         }
         private void DefaultBoardStateArray()
         {
-            // Why does test NewGame_Defaults_Initial_Values fail when the below is part of the code?
-            // BoardState = new Player[GridSize, GridSize];
-
             for (int i = 0; i < BoardState.GetLength(0); i++)
             {
                 for (int j = 0; j < BoardState.GetLength(1); j++)
@@ -44,6 +41,11 @@ namespace Tic_Tac_Toe
         }
         public void UpdateBoardState(int row, int column, bool itsPlayerXsTurn)
         {
+            if (row < 0 || column < 0)
+            {
+                throw new NegativeBoardLocationException("The board cannot have negative coordinates");
+            }
+
             BoardState[row, column] = itsPlayerXsTurn ? Player.X : Player.O;
         }
         public void SetNextPlayer()

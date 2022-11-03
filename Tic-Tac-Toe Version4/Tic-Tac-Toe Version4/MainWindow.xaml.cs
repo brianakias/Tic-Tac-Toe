@@ -21,7 +21,7 @@ namespace Tic_Tac_Toe
         {
             if (GameEngine.GameOver)
             {
-                GameEngine.NewGame();
+                NewGrid(GameEngine.GridSize);
                 return;
             }
 
