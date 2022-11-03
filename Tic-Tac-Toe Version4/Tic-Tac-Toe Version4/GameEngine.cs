@@ -48,7 +48,11 @@ namespace Tic_Tac_Toe
         {
             if (row < 0 || column < 0)
             {
-                throw new NegativeBoardCoordinatesException("The board cannot have negative coordinates");
+                throw new BoardCoordinatesOutOfBoundsException("The board cannot have negative coordinates");
+            }
+            else if (row >= GridSize || column>= GridSize)
+            {
+                throw new BoardCoordinatesOutOfBoundsException($"Coordinates passed point at positions outside of the range of a {GridSize}x{GridSize} board.");
             }
 
             BoardState[row, column] = itsPlayerXsTurn ? Player.X : Player.O;

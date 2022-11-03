@@ -281,27 +281,27 @@ namespace nUnit_Tests_Tic_Tac_Toe
         }
 
         [Test]
-        public void UpdateBoardState_PassingNegativeRow_ThrowsNegativeCoordinatesException()
+        public void UpdateBoardState_PassingNegativeRow_ThrowsBoardCoordinatesOutOfBoundsException()
         {
             Player[,] boardState = gameEngine.BoardState;
             gameEngine.ItsPlayerXsTurn = true;
-            Assert.Throws<NegativeBoardCoordinatesException>(() => gameEngine.UpdateBoardState(-1, 0, gameEngine.ItsPlayerXsTurn));
+            Assert.Throws<BoardCoordinatesOutOfBoundsException>(() => gameEngine.UpdateBoardState(-1, 0, gameEngine.ItsPlayerXsTurn));
         }
 
         [Test]
-        public void UpdateBoardState_PassingNegativeColumn_ThrowsNegativeCoordinatesException()
+        public void UpdateBoardState_PassingNegativeColumn_ThrowsBoardCoordinatesOutOfBoundsException()
         {
             Player[,] boardState = gameEngine.BoardState;
             gameEngine.ItsPlayerXsTurn = false;
-            Assert.Throws<NegativeBoardCoordinatesException>(() => gameEngine.UpdateBoardState(2, -2, gameEngine.ItsPlayerXsTurn));
+            Assert.Throws<BoardCoordinatesOutOfBoundsException>(() => gameEngine.UpdateBoardState(2, -2, gameEngine.ItsPlayerXsTurn));
         }
 
         [Test]
-        public void UpdateBoardState_PassingNegativeRowAndColumn_ThrowsNegativeCoordinatesException()
+        public void UpdateBoardState_PassingNegativeRowAndColumn_ThrowsBoardCoordinatesOutOfBoundsException()
         {
             Player[,] boardState = gameEngine.BoardState;
             gameEngine.ItsPlayerXsTurn = true;
-            Assert.Throws<NegativeBoardCoordinatesException>(() => gameEngine.UpdateBoardState(-4, -2, gameEngine.ItsPlayerXsTurn));
+            Assert.Throws<BoardCoordinatesOutOfBoundsException>(() => gameEngine.UpdateBoardState(-4, -2, gameEngine.ItsPlayerXsTurn));
         }
 
         [Test]
@@ -314,6 +314,30 @@ namespace nUnit_Tests_Tic_Tac_Toe
         public void GameEngine_PassingGridSizeGreaterThan12_ThrowsInvalidGridSizeException()
         {
             Assert.Throws<InvalidGridSizeException>(() => new GameEngine(13));
+        }
+
+        [Test]
+        public void UpdateBoardState_PassingRowGreaterThanTheGridSize_ThrowsBoardCoordinatesOutOfBoundsException()
+        {
+            Player[,] boardState = gameEngine.BoardState;
+            gameEngine.ItsPlayerXsTurn = true;
+            Assert.Throws<BoardCoordinatesOutOfBoundsException>(() => gameEngine.UpdateBoardState(10, 0, gameEngine.ItsPlayerXsTurn));
+        }
+
+        [Test]
+        public void UpdateBoardState_PassingColumnEqualToTheGridSize_ThrowsBoardCoordinatesOutOfBoundsException()
+        {
+            Player[,] boardState = gameEngine.BoardState;
+            gameEngine.ItsPlayerXsTurn = false;
+            Assert.Throws<BoardCoordinatesOutOfBoundsException>(() => gameEngine.UpdateBoardState(2, 3, gameEngine.ItsPlayerXsTurn));
+        }
+
+        [Test]
+        public void UpdateBoardState_PassingRowEqualToTheGridSizeAndAndColumnGreaterThanTheGridSize_ThrowsBoardCoordinatesOutOfBoundsException()
+        {
+            Player[,] boardState = gameEngine.BoardState;
+            gameEngine.ItsPlayerXsTurn = true;
+            Assert.Throws<BoardCoordinatesOutOfBoundsException>(() => gameEngine.UpdateBoardState(3, 4, gameEngine.ItsPlayerXsTurn));
         }
     }
 }

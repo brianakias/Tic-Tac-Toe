@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tic_Tac_Toe
 {
-    public class NegativeBoardCoordinatesException : Exception
+    public class BoardCoordinatesOutOfBoundsException : Exception
     {
-        public NegativeBoardCoordinatesException(string message) : base(message)
+        public BoardCoordinatesOutOfBoundsException(string message) : base(message)
         {
 
         }
