@@ -43,7 +43,7 @@ namespace Tic_Tac_Toe
         {
             if (row < 0 || column < 0)
             {
-                throw new NegativeBoardLocationException("The board cannot have negative coordinates");
+                throw new NegativeCoordinatesException("The board cannot have negative coordinates");
             }
 
             BoardState[row, column] = itsPlayerXsTurn ? Player.X : Player.O;
